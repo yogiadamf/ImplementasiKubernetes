@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "implementasikubernetes-33b1"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "implementasikubernetes-33b1"
+  template:
+    metadata:
+      labels:
+        app: "implementasikubernetes-33b1"
+    spec:
+      containers:
+        - name: "implementasikubernetes-33b1"
+          image: "cobakubernetes12.azurecr.io/implementasikubernetes"
+          ports:
+          - containerPort: 22
